@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;500;600;700;800&family=Parisienne&display=swap" rel="stylesheet">
+
+    <title>RSVP</title>
+    <link rel="icon" type="image/x-icon" href="./photo/favicon.PNG">
+</head>
+<body>
+    <header>
+        <h1>M & J</h1>
+
+        <nav> 
+            <a class="home" href="index.html">
+                Home
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="rsvp-page">
+            <h1>RSVP</h1>
+        </div>
+
+        <div class="rsvp-form">
+
+            <form id="form">
+                <div>
+                    <label>First Name: </label>
+                    <br>
+                    <input class="input" type="text" id="fname" name="First Name" required>
+                </div>
+                <br>
+                <div>
+                    <label>Last Name: </label>
+                    <br>
+                    <input class="input" type="text" id="lname" name="Last Name" required>
+                </div>
+                <br>
+                <div>
+                    <label>Phone Number: </label>
+                    <br>
+                    <input class="input" type="tel"  id="phone" name="Phone Number" pattern="[-+]?[0-9]*[.,]?[0-9]+" required>
+                </div>
+                <br>
+                <div>
+                    <label>Will you be attending? </label>
+                    <br>
+                    <select id="attending" name="Attending">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <br>
+                
+                <div>
+                    <label>Will you be bringing a plus one? </label>
+                    <br>
+                    <select id="plusOne" name="Plus One">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                   
+                </div>
+                
+                <br>
+                <div>
+                    <label> Do you have any dietary requirements: </label>
+                    <br>
+                    <select id="diet" name="Dietary Requirements">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                    <br>
+                    <label>If Yes: </label>
+                    <br>
+                    <textarea id="message" name="If Yes"></textarea>
+                </div>
+                <br>
+                <div>
+                    
+                <div class="sub">
+                    <input class="submit" type="submit" value="Submit" id="submit" />
+                </div>
+            </form>
+        </div>
+
+
+     
+
+    </main>
+    <footer class="rsvp-footer">
+        <p>Hope To See You There!</p>
+    </footer>
+
+
+    <script>
+        const form = document.querySelector("#form");
+        const submitButton = document.querySelector("#submit");
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbws8HMoFR7i8qQ-54wKAz3fWtMkQj4_DkSLGMYBhmVqJCQr7R-0_4jvxj1ojH7RwV7nqA/exec';
+     
+        form.addEventListener('submit', e => {
+            submitButton.disabled = true;
+            e.preventDefault();
+            let requestBody = new FormData(form);
+            fetch(scriptURL, { method: 'POST', body: requestBody })
+                .then(response => response.text())  // or response.json() if the response is JSON
+                .then(data => {
+                    alert('Success!', data);
+                    submitButton.disabled = false;
+                })
+                .catch(error => {
+                    alert('Error!', error.message);
+                    submitButton.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html>

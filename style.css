@@ -1,0 +1,710 @@
+html {
+    background-color: #061F03;
+    color: #c9bbc3;
+}
+
+body {
+    flex-direction: column;
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+    font-family:  "Parisienne", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+h2 {
+    font-size: 25px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;   
+    font-style: normal;
+}
+
+p, label {
+    font-size: 20px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    line-height: 30px;
+}
+
+/* ~~~~~~ Button ~~~~~~ */
+
+.btn button, .submit:link {
+    background-color: #c9bbc3;
+    color: black;
+    font-size: 15px;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: none;
+    width: 150px;
+    height: 50px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.btn button:hover, .submit:hover {
+    padding: 13px 33px;
+    font-size: 18px;
+    border:1px solid #c9bbc3;
+    background-color: #061F03;
+    color: #c9bbc3;
+    font-weight: bold;
+}
+
+.submit {
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.btn button:active, .submit:active {
+    font-size: 15px;
+    border: 2px solid #c9bbc3;
+}
+
+.rsvp-btn button {
+    background-color: #061F03;
+    color: #c9bbc3;
+    font-size: 15px;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: none;
+    width: 150px;
+    height: 50px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rsvp-btn button:hover {
+    padding: 13px 33px;
+    font-size: 18px;
+    border:1px solid #061F03;
+    background-color: #c9bbc3;
+    color: #061F03;
+    font-weight: bold;
+}
+
+.rsvp-btn button:active {
+    font-size: 15px;
+    border: 2px solid #061F03;
+}
+
+
+.sub {
+    text-align: center;
+    font-size: 15px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.submit {
+    background-color: #c9bbc3;
+    border-radius: 15px;
+   
+}
+
+
+/* ~~~~~~ nav bar ~~~~~~*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #c9bbc3;
+    
+    
+}
+
+header h1 {
+   text-align: left; 
+   padding-left: 50px;
+   font-family:  "Parisienne", cursive;
+   font-weight: 400;
+   font-style: normal;
+   
+}
+
+.menu {
+    background-color: #c9bbc3;
+    border: 1px solid #061F03;
+    height: 100%;
+    width: 100%;
+    max-width: 350px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #061F03;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.menu a:hover{
+    font-size: 30px;
+}
+
+.menu a:active{
+    font-size: 30px;
+    color: #16700c;
+}
+
+.menu.active {
+    right: 0;
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+    background-color: #061F03;
+}
+
+.hamburger {
+    height: 50px;
+    width: 40px;
+    position: relative;
+    margin-right: 30px;
+}
+
+.hamburger span {
+    height: 6px;
+    width: 100%;
+    background-color: #c9bbc3;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    margin-top: 7px;
+}
+
+.hamburger span:nth-child(1) {
+    top: 25%;
+}
+
+.hamburger span:nth-child(3) {
+    top: 75%;
+}
+
+.hamburger.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: #061F03;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: #061F03;
+}
+
+@media only screen and (max-width: 700px){
+    header h1{
+        font-size: 30px;
+    }
+}
+
+/* ~~~~~~ Intro ~~~~~~ */
+
+.intro {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 30px;   
+}
+
+.intro div{
+    margin: auto;
+    align-items: center;
+    font-family: "Namdhinggo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.intro h1 {
+    text-align: center;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.name {
+    font-size: 70px;
+    text-align: center;
+    font-family:  "Parisienne", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.intro .join_us {
+    text-align: center;
+    font-size: 30px;
+}
+
+.intro .date {
+    text-align: center;
+    font-size: 20px;
+}
+
+.intro button {
+    margin: 0 auto;
+    display: block;
+    
+}
+
+.intro a {
+    text-decoration: none;
+}
+
+.intro .rsvp-date {
+    text-align: center;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.intro img {
+    width: 50%;
+    float: right;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .intro h1 {
+        font-size: 25px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .intro button {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .intro img {
+        margin-top: 30px ;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* ~~~~~~ On the day ~~~~~~*/
+
+
+
+.OnTheDay {
+    background-color:#c9bbc3; 
+    color: black;
+    justify-content: center;
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.schedule{
+    padding: 30px;
+    text-align: center;
+    
+}
+
+.OnTheDay img{
+    text-align: center;
+    width: 5%;
+    height: auto;
+    Margin: 0px 40px;
+}
+
+
+.schedule ul{
+    list-style-type: none;
+}
+
+.updates {
+    font-style: italic;
+    text-decoration: underline 1px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .OnTheDay {
+        justify-content: center;
+    }
+
+    .OnTheDay h1 {
+        font-size: 30px;
+        text-align: center; 
+    }
+
+    .schedule h2 {
+        font-size: 20px;
+    }
+
+    .schedule {
+        width: 300px;
+    }
+    
+    .OnTheDay img {
+        width: 5%;
+        
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .OnTheDay {
+        justify-content: center;
+    }
+
+    .schedule ul{
+        padding: 0px;
+        
+    }
+
+    .OnTheDay img{
+        display: none;
+    }
+}
+
+/* ~~~~~~ Photos ~~~~~~*/
+.photo {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+
+.photo img {
+    width: 19%;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 700px){
+    img.one, img.four {
+        display: none;
+    }
+
+    .photo img {
+        width: 30%;
+    }
+}
+
+/* ~~~~~~ Travel & Stay ~~~~~~*/
+
+.travel {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #c9bbc3;
+    color: black;
+    padding: 50px 50px 100px 50px;
+    text-align: center;
+}
+
+.travel h1 {
+    width: 100%;
+}
+
+.travel h2 {
+    font-size: 30px;
+    align-items: center;
+    margin: 0px 0px 25px 0px;
+}
+
+.travel p {
+    margin: 0px 0px 25px 0px;
+}
+
+p.hotel {
+    text-decoration: underline 1px;
+    margin: 20px 0px 0px 0px;
+}
+
+.travel iframe {
+    height: 100%;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .travel h1{
+        font-size: 30px;
+    }
+    
+    .travel iframe {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        display: block;
+        padding-bottom: 20px;
+    }
+}
+
+/* ~~~~~~ Honeymoon ~~~~~~*/
+
+.honeymoon {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 25px 0px;
+}
+
+.honeymoon div{ 
+    text-align: center;
+    margin: 50px;
+}
+
+.honeymoon img {
+    align-items: center;
+    width:20%; 
+    margin: 10px 20px;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .honeymoon div {
+        margin: 25px;
+    }
+    
+    .honeymoon h1{
+        font-size: 30px;
+    }
+
+    .honeymoon p {
+        font-size: 16px;
+    }
+
+    .honeymoon img {
+        margin: 0 auto;
+        display: block;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* ~~~~~~ RSVP ~~~~~~*/
+
+.rsvp {
+    background-color:#c9bbc3;
+    color: black;
+    padding: 50px;
+    text-align: center; 
+}
+
+@media only screen and (max-width: 700px){
+    .rsvp h1 {
+        font-size: 30px;
+    }
+}
+
+/* ~~~~~~ Footer ~~~~~~ */
+
+ footer {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+ }
+
+ .ms-questions {
+    padding: 20px 200px;
+    
+ }
+
+.name-email {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center; 
+    text-align: left;  
+}
+
+#name, #email {
+    padding: 0px 0px 0px 10px;
+}
+
+#questions {
+    width: 320px;
+    height: 100px;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    footer h1{
+        font-size: 40px;
+    }
+
+    .ms-questions {
+        padding: 0px 0px;
+     }
+
+    #footerInput{
+        width: 50%;
+    }
+
+    #questions {
+        width: 300px;
+        
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .name-email {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center; 
+        text-align: center;  
+    }
+
+    .name-email input {
+        width: 230px;
+    }
+     
+    #questions {
+        width: 200px;
+        
+    }
+
+    #footerInput{
+        width: 30%;
+    }
+
+}
+
+/* ~~~~~~~~~~~~~~~ RSVP Page ~~~~~~~~~~~~~~~ */
+
+.rsvp-page {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.home {
+    text-decoration: none;
+    color: #c9bbc3;
+    font-size: 30px;
+    margin-right: 40px;
+    
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.home:hover {
+    color: #c9bbc3;
+    font-size: 33px;
+    font-weight: 525;
+}
+
+.home:active {
+    color: #c59eb4;
+    font-size: 33px;
+}
+
+.rsvp-form {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+label {
+    margin: 10px;
+}
+
+input, select, textarea {
+    background-color: #f0f0f0;
+    color: black;
+    padding: 0px 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+select {
+    width: 75px;
+}
+
+textarea {
+    padding: 10px 10px;
+    
+}
+
+.input, textarea {
+    width: 200px;
+}
+
+.rsvp-footer {
+    border-top: 1px solid #c9bbc3;
+    margin: 20px 0px 0px 0px;
+    
+ }
+
+ .rsvp-footer p {
+    padding-top: 10px;
+    font-family: "Parisienne", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+ }
+
+@media only screen and (max-width: 700px) {
+    .rsvp-page {
+        text-align: center;
+    }
+
+    .rsvp-form {
+        text-align: center;
+    }
+
+    .rsvp-footer p{
+        font-size: 20px;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~ Back To Top ~~~~~~~~~~~~~~~ */
+
+
